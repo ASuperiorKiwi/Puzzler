@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ending</title>
+<link type=“text/css” rel=“stylesheet”
+</head>
+<body>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+</style>
+<body>
+
+<h1>Loading...</h1>
+
+<div id="myProgress">
+  <div id="myBar">0%</div>
+</div>
+
+<br>
+<button onclick="move()">Start to Load</button> 
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 10;
+  var id = setInterval(frame, 400);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+
+
+<button onclick="setTimeout(myFunction, 1);"></button><----click
+
+
+<script>
+function myFunction() {
+    alert('That is it you are done. Officialy:)! Thats it no more tricks! Thanks for playing the Puzzler! You can close this game now!');
+}
+</script>
+
+<p>Ps. This might take a while</p>
+
+</body>
+</html>
